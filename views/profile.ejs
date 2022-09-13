@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            profile
+        </title>
+        <style>
+          body {
+            margin:0px;
+            padding:0px;
+          }
+        </style>
+    </head>
+    <body>
+        <%- include('common/header'); %>
+        <h4>hello:-<%= user.name %></h4>
+        <h4>your email:-<%= user.email %></h4>
+        <h4>your dob:-<%= user.dob %></h4>
+        <h4>skiils:-<% user.skils.forEach((i)=>{ %>
+          <li style="color:blue;"><%= i %></li>
+        <% }) %></h4>
+        <%- include('common/footer'); %><!--hypen is used for html file ,to print = sign is used -->
+    </body>
+</html>
